@@ -55,6 +55,9 @@ client.on("message", async message => {
   if(comando === "avatar") {
     message.reply(message.author.avatarURL);
   }
+  if(comando === "help") {
+    message.channel.send("**Comandos:** !!help !!ping !!avatar");
+  }
 });
 
 client.login(config.token);
